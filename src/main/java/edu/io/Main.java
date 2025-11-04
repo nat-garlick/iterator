@@ -40,6 +40,18 @@ public class Main {
             System.out.println("Podano za duzo argumentow");
             return;
         }
-        
+        var ts= new TextSource(text);
+        if(args[0].equals("c")){
+            //var iterator=ts.iterator();
+            for(var c: ts){
+                System.out.println(c);
+            }
+        }
+        if(args[0].equals("w")){
+            var iterator=ts.wordIterator();
+            while(iterator.hasNext()){
+                System.out.println(iterator.next());
+            }
+        }
     }
 }
